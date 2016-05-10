@@ -30,11 +30,11 @@ namespace Task2
 
 			public string Owner { get; set; }
 
-		public void UpdateOwner(string owner, string newOwner)
+		public void UpdateOwner(string newOwner)
 			{
 				
 				if (string.IsNullOrWhiteSpace(newOwner)) throw new ArgumentException("Owner name must not be empty.", nameof(newOwner));
-				owner = newOwner;
+				Owner = newOwner;
 			}
 		
 		}

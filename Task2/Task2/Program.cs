@@ -19,7 +19,7 @@ class Program{
 			foreach (var b in rifles)
 			{
 				Console.WriteLine("{0}, {1}, {2}, {3}", b.Brand, b.ManufactureDate, b.Calibre, b.Owner);
-				b.UpdateOwner(b.Owner, "MIA");
+				b.UpdateOwner("MIA");
 				Console.WriteLine("{0}, {1}, {2}, {3}", b.Brand, b.ManufactureDate, b.Calibre, b.Owner);
 			}
 
