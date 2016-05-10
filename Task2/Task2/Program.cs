@@ -1,55 +1,31 @@
-﻿using System;
+using System;
+using System.Linq;
 
 namespace Task2
 {
-
-	public class Gun
-			{
-
-				public Gun(string brand, int manufacture_date, double calibre, string owner)
-				{
-					if (string.IsNullOrWhiteSpace(brand)) throw new ArgumentException("Brand must not be empty.", nameof(brand));
-					if (manufacture_date < 0) throw new Exception("Negative year entered");
-					//if (string.IsNullOrWhiteSpace(calibre)) throw new ArgumentException("Calibre must not be empty.", nameof(calibre));
-
-					Brand = brand;
-					ManufactureDate = manufacture_date;
-					Calibre = calibre;
-					Owner = owner;
-
-				}
-		
-			public string Brand { get; }
-
-			public int ManufactureDate { get; }
-
-			public double Calibre { get; }
-
-			public string Owner { get; }
-
-		public void UpdateOwner(string owner, string newOwner)
-			{
-				
-				if (string.IsNullOrWhiteSpace(newOwner)) throw new ArgumentException("Owner name must not be empty.", nameof(newOwner));
-				owner = newOwner;
-			}
-		
-		}
-
 
 class Program{
 	
 		public static void Main ()
 		{
-			Console.WriteLine ("Hello World!");
-		var rifles = new [] 
-		{
-			new Gun("Colt", 1820, 7.5, "John Doe"),
-		};
+			//Console.WriteLine ("Hello World!");
+			var rifles = new [] 
+			{
+				new Flintlock("Colt", 1820, 7.5, "John Doe"),
+				new Flintlock("Collier", 1814, 5, "Sean Mason"),
+				new Flintlock("Erberlitz", 1848, 10, "Janos Hunyadi"),
+			};
 
+			foreach (var b in rifles)
+			{
+				Console.WriteLine("{0}, {1}, {2}, {3}", b.Brand, b.ManufactureDate, b.Calibre, b.Owner);
+				b.UpdateOwner(b.Owner, "MIA");
+				Console.WriteLine("{0}, {1}, {2}, {3}", b.Brand, b.ManufactureDate, b.Calibre, b.Owner);
+			}
 
+		
 
 		}
 
-}
+	}
 }
