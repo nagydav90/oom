@@ -1,0 +1,20 @@
+[
+  {
+    "Lenght": 98.0,
+    "Brand": "Benpi",
+    "ManufactureDate": 1989,
+    "Owner": "Walter Smith"
+  },
+  {
+    "Calibre": 5.5,
+    "Brand": "Hinin",
+    "ManufactureDate": 2016,
+    "Owner": "Linda Satou"
+  },
+  {
+    "Calibre": 55.0,
+    "Brand": "Dragonhunter",
+    "ManufactureDate": 1892,
+    "Owner": "Morath Oghar"
+  }
+]This text shows that append function also works

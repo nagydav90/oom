@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.IO;
 using Newtonsoft.Json;
 
 namespace Task3
@@ -40,7 +41,25 @@ class Program{
 
 			var json_array2 = Newtonsoft.Json.JsonConvert.DeserializeObject(s1);
 			Console.WriteLine(json_array2);
+
+			string path = @"c:\Users\HLord\oom\Task3\Task3\MyTest.txt";
+
+			if (!File.Exists(path))
+			{
+				File.WriteAllText(path, s1);
+			}
+
+			string extraText = "This text shows that append function also works" + Environment.NewLine;
+
+			File.AppendAllText(path, extraText);
+
+			string s2 = File.ReadAllText(path);
+			Console.WriteLine(s2);
+
 		}
+
+			
+			
 
 	}
 }
