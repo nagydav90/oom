@@ -50,7 +50,7 @@ namespace Task3
 		public void Test_Flintlock_Arguments()
 		{
 			var x = new Flintlock("Colt", 1820, 7.5, "John Doe");
-			Assert.IsTrue(x.Brand == "Colt" && x.ManufactureDate == 1867 && x.Calibre == 7.5);
+			Assert.IsTrue(x.Brand == "Colt" && x.ManufactureDate == 1820 && x.Calibre == 7.5);
 		}
 
 		[Test]

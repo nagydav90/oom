@@ -9,7 +9,7 @@ namespace Task3
 	{
 		public Sword (string brand, int manufacture_date, double lenght, string owner)
 		{
-			if (string.IsNullOrWhiteSpace(brand)) throw new ArgumentException("Brand must not be empty.", nameof(brand));
+			if (string.IsNullOrWhiteSpace(brand)) throw new ArgumentException("Brand must not be empty.") ;
 			if (manufacture_date < 0) throw new Exception("Negative year entered");
 			//if (string.IsNullOrWhiteSpace(calibre)) throw new ArgumentException("Calibre must not be empty.", nameof(calibre));
 
