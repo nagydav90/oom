@@ -19,8 +19,6 @@ namespace Task3
 			Owner = owner;
 
 		}
-
-		public double Lenght { get; }
 		#region Weapon implementation
 		public string Brand { get; }
 
@@ -28,6 +26,9 @@ namespace Task3
 
 		public string Owner { get; set; }
 
+		public double Lenght { get; }
+
+	
 		public void UpdateOwner(string newOwner)
 		{
 

@@ -21,15 +21,15 @@ namespace Task3
 					Owner = owner;
 
 				}
-			public double Calibre { get; }
 		#region Weapon implementation
+
 			public string Brand { get; }
 
 			public int ManufactureDate { get; }
 
 			public string Owner { get; set; }
 
-			
+			public double Calibre { get; }
 
 
 		public void UpdateOwner(string newOwner)
